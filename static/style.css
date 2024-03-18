@@ -1,0 +1,124 @@
+body, section{
+    min-width: 850px;
+    user-select: none;
+}
+.info-sait{
+    float: left; /*Задаем обтекание*/
+    line-height: 120px;/*Высота строки + верт. центрирования текста*/
+    font-size: 40px;
+    background: dodgerblue;
+    color: white;
+    margin-top: 60px;
+    width: 320px; /*Фиксируем ширину блока*/
+    margin-right: 10px;
+    text-align: center; /*Центрируем текст по горизонтали*/
+}
+
+.body{
+    min-width: auto
+}
+.base{
+    height: 100vh;
+    width: 85vw;
+    margin:auto;
+    background-color: #F6F6F6;
+    min-width: 600px;
+}
+.info-a{
+    text-align: center;
+    user-select: none;
+    color: #37494D;
+}
+.info-a:hover{
+    color: #6C8E97;
+}
+section{
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 3px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 100px;
+}
+section:hover{
+    background-color: #E6E6E6;
+}
+h3, h4{
+    text-align: center;
+}
+h3, h4, p{
+    margin: 2px;
+}
+a{
+    color: #3774A4;
+}
+/*Для меню регистрации и авторизации*/
+button, input {box-sizing: border-box;}
+    
+/* Кнопка, используемая для открытия контактной формы-фиксируется в нижней части страницы */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+}
+
+/* Добавление стилей в контейнер форм */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/кнопка */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавьте красный цвет фона к кнопке отмена */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Добавьте некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
