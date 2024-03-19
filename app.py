@@ -1,21 +1,28 @@
-# from sqlalchemy import create_engine
 from flask import Flask
 from flask import render_template
-
-'''db_uri = "SQLite://C:/Users/andre/форум/db/forum.db"
-eng = create_engine(db_uri)
-connection = eng.connect()
-outs = eng.execute('SELECT * FROM '"user"'')
-
-print(outs)
-connection.close()
-'''
-forum = Flask(__name__)
+import sqlite3
 
 
-@forum.route('/')
+def ain():
+    connection = sqlite3.connect('\data\database.db')
+    connection.close()
+
+app = Flask(__name__)
+
+
+@app.route('/')
 def index_html():
     return render_template('index.html')
 
 
-forum.run(debug=True)
+@app.errorhandler(404)
+def handle_bad_request(e):
+    return render_template('404.html'), 404
+
+
+def main():
+    app.run(debug=True)
+
+
+if __name__ == '__main__':
+    main()

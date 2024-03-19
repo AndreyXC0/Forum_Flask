@@ -51,8 +51,8 @@ h3, h4, p{
     margin: 2px;
 }
 a{
-    color: #3774A4;
-}
+  color: #3774A4;
+  }
 /*Для меню регистрации и авторизации*/
 button, input {box-sizing: border-box;}
     
